@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day!</title>
+    <style>
+        body {
+            background-color: #ff99cc; /* Pink background */
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 3em;
+            margin: 20px;
+            text-shadow: 2px 2px #ff66b2;
+        }
+        p {
+            font-size: 1.5em;
+            margin: 10px;
+            animation: fadeIn 2s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .button {
+            background-color: #ff6699;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #ff3399;
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Valentine's Day, Sabrina!</h1>
+    <p>Sending you all my love on this special day!</p>
+    <button class="button" onclick="alert('You mean the world to me!')">Click for a Romantic Message</button>
+    <script>
+        // Implementing swipe functionality for the romantic messages
+        let messages = [
+            'Every moment with you is a beautiful memory.',
+            'You are my sunshine on a rainy day!',
+            'Together is a wonderful place to be.',
+            'Love is not just a feeling; it’s a choice I make every day.',
+        ];
+        let index = 0;
+        function showMessage() {
+            alert(messages[index]);
+            index = (index + 1) % messages.length; // Loop through messages
+        }
+        document.querySelector('.button').addEventListener('click', showMessage);
+    </script>
+</body>
+</html>
